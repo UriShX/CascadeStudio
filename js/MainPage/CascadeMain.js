@@ -2,6 +2,8 @@
 // If you're looking for the internals of the CAD System, they're in /js/CADWorker
 // If you're looking for the 3D Three.js Viewport, they're in /js/MainPage/CascadeView*
 
+import 'golden-layout/dist/goldenlayout'
+
 var myLayout, monacoEditor, threejsViewport,
     consoleContainer, consoleGolden, gui,
     guiPanel, GUIState, count = 0, //focused = true,
