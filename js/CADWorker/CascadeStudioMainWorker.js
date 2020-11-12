@@ -25,9 +25,8 @@ console.error = function (err, url, line, colno, errorObj) {
 importScripts(
   //'../../node_modules/three/build/three.min.js',
   './CascadeStudioShapeToMesh.js',
-  '../../node_modules/opencascade.js/dist/opencascade.wasm.js',
-  '../../node_modules/opentype.js/dist/opentype.min.js',
-  // '../../node_modules/typescript/bin/typescript.min.js'
+  './required/opencascade.js/dist/opencascade.wasm.js',
+  './required/opentype.js/dist/opentype.min.js',
   './required/typescript/bin/typescript.min.js'
 );
 
@@ -75,7 +74,7 @@ var messageHandlers = {};
 new opencascade({
   locateFile(path) {
     if (path.endsWith('.wasm')) {
-      return "../../node_modules/opencascade.js/dist/opencascade.wasm.wasm";
+      return "./required/opencascade.js/dist/opencascade.wasm.wasm";
     }
     return path;
   }
